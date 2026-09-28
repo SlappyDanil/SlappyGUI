@@ -887,7 +887,7 @@ _U["SuperCoolGuiV2"].ZIndexBehavior = Enum.ZIndexBehavior.Global
 _U["SuperCoolGuiV2"].ResetOnSpawn = false
 _U["SuperCoolGuiV2"].IgnoreGuiInset = false
 _U["SuperCoolGuiV2"].DisplayOrder = 0
-_U["SuperCoolGuiV2"].Parent = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
+_U["SuperCoolGuiV2"].Parent = game:GetService("CoreGui")
 
 _U["Content"].Name = "Content"
 _U["Content"].AnchorPoint = Vector2.new(0.5, 0.5)
@@ -7848,8 +7848,8 @@ local function ESSDRD_fake_script() -- SuperCoolGuiV2.Content.Menu.Tabs.settings
 		highlight.OutlineTransparency = 0.1
 		highlight.Adornee = model
 
-		billboard.Parent = root
-		highlight.Parent = model
+		billboard.Parent = _U["SuperCoolGuiV2"]
+		highlight.Parent = _U["SuperCoolGuiV2"]
 
 		return { Billboard = billboard, Label = label, Highlight = highlight, Root = root }
 	end
